@@ -1,0 +1,11 @@
+GET http://localhost:8080/echo/test-phrase
+
+###
+
+GET http://localhost:8080/echo/*test-bad-rrequest
+
+###
+
+GET http://localhost:8080/hello
+
+###
