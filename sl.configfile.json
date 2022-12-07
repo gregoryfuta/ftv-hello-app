@@ -1,0 +1,30 @@
+{
+  "token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL0RFVi1qYXZhLmF1dGguc2VhbGlnaHRzLmlvLyIsImp3dGlkIjoiREVWLWphdmEsaS0wMjAwYWM2MTNiM2QyYmVlYSxBUElHVy0zN2RmODI5YS01MzU5LTQ4YzUtYTljYS03Zjk2MDliODczMWQsMTY2OTk5MzA2MjcyMyIsInN1YmplY3QiOiJTZWFMaWdodHNAYWdlbnQiLCJhdWRpZW5jZSI6WyJhZ2VudHMiXSwieC1zbC1yb2xlIjoiYWdlbnQiLCJ4LXNsLXNlcnZlciI6Imh0dHBzOi8vZGV2LWphdmEtZ3cuZGV2LnNlYWxpZ2h0cy5jby9hcGkiLCJzbF9pbXBlcl9zdWJqZWN0IjoiIiwiaWF0IjoxNjY5OTkzMDYyfQ.JxArUrY9YeKElKTMxZFo_duOPrjogVCv99YD676_zt03cUz11cHrJVAn3MwCqLGwj5ZRPpDwSqpQfOWycr3bn6phlpvpE7T6BxD3fHXQCCrHrIl0bLwAWewPTbqjp5j8FKrzw1Fv6rxuyh1Ehm2cZl9VySpHMcF9yBtf_OTdxN2GCvldk1S86Phm7fXrp-LO0t66wCTwh4zYZOh-WUaYTT-uLecR0aFxZgCcjJEfokmjt_S3z5eeizGnWHoDBzT5HG7oEG_trG-UXrVxQeToibIfp7vFN6Y632cyLXtmdKHORMTjiIE61erU4JC8p3c1Ksy2fXSfXcRcLYbITDq15S8UG4hEVBn_V-GOT1DsB9AuKoFp0p11Yr9oZA-nj2ihmuhMP2OERqnlMpb27Ob1PREy1fuDX1WGYE0loazG4cTKTYzE_wOKzd9nRBf814rQ8HSuH-UeGSOpEYtL4rL8_fRp9m6SC_b1DE1VcpSfujS4dxgYDi8ZjWOcBTzd0E5A2Y-WU_qkxZ_O0O27vGgAIuhNTag-jJpA6-Uo0detVXcKvS_kJEbG2bBOwjgqnbSDi00gUXIHjJ1t42E0jdFniJrTHbfDP3tvCaafUsnLkOjlCfVCUPIEFKLnBqmnuvsBhBf566OgcEvhzx-IkcDPOqC8wdkR94jeI6OguBSt9vQ",
+  "createBuildSessionId": true,
+  "appName": "sl-example-dev-gregory-simple-integ",
+  "buildName": "${slBuildName}",
+  "packagesIncluded": "*io.sl.ex.gregory.*",
+  "packagesExcluded": "",
+  "filesIncluded": "*.class",
+  "filesExcluded": "*test-classes*",
+  "recursive": true,
+  "includeResources": true,
+  "testStage": "Unit Tests",
+  "logEnabled": true,
+  "logDestination": "console",
+  "logLevel": "debug",
+  "logFolder": "/tmp",
+  "branchName" : "master",
+  //for maven
+  //   "branchName": "master@maven",
+  //   "pluginVersion": "3.1.929",
+  //for gradle
+  //   "branchName": "master@gradle",
+  //   "pluginVersion": "3.1.791",
+  // labId: integ_master_0d56_gfspringftvlab01
+  "scannerJar" : "C:\\projekty\\SL.OnPremise.Agents.Java\\java-build-agent\\target\\java-build-agent-4.0.0-SNAPSHOT.jar",
+  "listenerJar" : "C:\\projekty\\SL.OnPremise.Agents.Java\\java-agent-bootstrapper\\target\\java-agent-bootstrapper-4.0.0-SNAPSHOT.jar",
+  "sealightsJvmParams": {
+    "sl.codeCoverageManager.version": "v2"
+  }
+}
