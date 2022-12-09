@@ -3,7 +3,8 @@ package dev.futa.sealights.ftv.api;
 import static org.springframework.http.ResponseEntity.badRequest;
 
 import dev.futa.sealights.ftv.service.EchoService;
-import java.util.Objects;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,4 +33,8 @@ public class EchoController {
         return "Hello World!";
     }
 
+    @GetMapping("/hello/date")
+    public String echoDate() {
+        return LocalDate.now().format(DateTimeFormatter.ISO_DATE);
+    }
 }

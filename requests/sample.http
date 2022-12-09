@@ -1,4 +1,4 @@
-GET http://localhost:8080/echo/test-phrase
+GET http://localhost:8080/echo/test-phrase1
 
 ###
 
@@ -7,5 +7,13 @@ GET http://localhost:8080/echo/*test-bad-rrequest
 ###
 
 GET http://localhost:8080/hello
+
+###
+
+GET http://localhost:8080/translate/why
+
+###
+
+GET http://localhost:8080/translate/por-que
 
 ###
