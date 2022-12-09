@@ -1,0 +1,1 @@
+java -jar .\agents\sl-build-scanner.jar -restoreGradle -workspacepath .

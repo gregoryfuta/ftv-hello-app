@@ -1,0 +1,1 @@
+.\gradlew.bat clean build -PslBuildName=001
