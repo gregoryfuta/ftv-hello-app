@@ -34,4 +34,13 @@ public class EchoServiceTest {
         assertFalse(response.isPresent());
     }
 
+    @Test
+    void shouldReturn13OnUnusedFunction() {
+        // when
+        int actual = echoService.intentionallyUnusedMethod();
+
+        // then
+        assertEquals(13, actual);
+    }
+
 }

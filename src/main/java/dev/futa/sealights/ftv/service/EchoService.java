@@ -10,6 +10,9 @@ public class EchoService {
         if (phrase.startsWith("*")) {
             return Optional.empty();
         }
+        if (phrase.startsWith("upper-")) {
+            return Optional.of("UPPERCASE PONG: " + phrase.toUpperCase());
+        }
         return Optional.of("PONG: " + phrase);
     }
 
