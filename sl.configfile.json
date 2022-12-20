@@ -27,6 +27,6 @@
   },
 
   "labId": "integ_master_0d56_gfspringftvlab01",
-  "packagesIncluded": "dev.futa*",
+  "packagesIncluded": "i0.sealights.*",
   "proxy": ""
 }

@@ -9,7 +9,7 @@
   "logEnabled": false,
   "logDestination": "console",
   "logLevel": "info",
-  "packagesIncluded": "dev.futa.sealights*",
+  "packagesIncluded": "i0.sealights*",
   "sealightsJvmParams": {},
   "appendToFile": true
 }
