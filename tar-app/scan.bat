@@ -3,11 +3,14 @@ set SL_TOKEN=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL0RFVi1pbn
 
 set LOGGING=-Dsl.log.toConsole=true -Dsl.log.level=info
 set SL_TOKEN_FILE=token.txt
-set PACKAGES=*i0.sealights*
+set PACKAGES="*i0.sealights.*"
 set SL_BUILD_SESSION_ID=5db59d71-0001-4656-b50a-69a91b97f68c
+set SL_BRANCHNAME=master
+set BUILD_NAME=classic-008
 
-java -jar ..\sl-build-scanner.jar -config -tokenfile %SL_TOKEN_FILE% -appname build-scan-builder -buildname classic-001 -pi %PACKAGES% -branchname %SL_BRANCHNAME% -buildsessionid %SL_BUILD_SESSION_ID%
 
-java %LOGGING% -jar ..\sl-build-scanner.jar -scan -tokenfile %SL_TOKEN_FILE% -buildsessionidfile buildSessionId.txt -workspacepath . -appname build-scan-builder -branch master -build classic-001 -pi %PACKAGES% -r
+java -jar ..\sl-build-scanner.jar -config -tokenfile %SL_TOKEN_FILE% -appname build-scan-builder -buildname %BUILD_NAME% -pi %PACKAGES% -branchname %SL_BRANCHNAME% -buildsessionidfile buildSessionId.txt
 
-java -jar ..\sl-build-scanner.jar -buildend  -ok -tokenfile %SL_TOKEN_FILE% -buildsessionidfile buildSessionId.txt
+java %LOGGING% -jar ..\sl-build-scanner.jar -scan -tokenfile %SL_TOKEN_FILE% -buildsessionidfile buildSessionId.txt -workspacepath . -appname build-scan-builder -branch master -build %BUILD_NAME% -pi %PACKAGES% -r
+
+rem java -jar ..\sl-build-scanner.jar -buildend -ok -tokenfile %SL_TOKEN_FILE% -buildsessionidfile buildSessionId.txt
