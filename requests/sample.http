@@ -1,5 +1,10 @@
-GET http://localhost:8080/echo/test-phrase1
+GET http://localhost:8080/echo/test-phrase2
+Baggage: x-sl-test-name=sometest
+Accept: */*
 
+baggage:x-sl-execution-id=1de21a4d-6b6d-4344-86a9-afb0f1fe3197,x-sl-test-name=sometest
+
+[{"key":"baggage","value":"baggage:x-sl-execution-id=1de21a4d-6b6d-4344-86a9-afb0\nf1fe3197,x-sl-test-name=sometest","description":"","type":"default","enabled":true}]
 ###
 
 GET http://localhost:8080/echo/*test-bad-rrequest
