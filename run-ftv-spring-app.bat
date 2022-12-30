@@ -4,14 +4,9 @@ set PACKAGES="i0.sealights.*"
 set APPLICATION_JAR=.\tar-app\ftv-hello-app.jar
 set WORKSPACE=-Dsl.workspace=tar-app
 
-rem set SL_LABID=integ_ftv_d580_helloftvapp
-rem set SL_APPNAME=hello-ftv-app
-rem set SL_BRANCH_NAME=ftv
-
 set SL_LABID=integ_otel_d67e_hellootelapp
 set SL_APPNAME=hello-otel-app
 set SL_BRANCH_NAME=otel
-
 
 set BUILD_NAME=otel-run-028
 set BATCH_SIZE=500
@@ -20,7 +15,7 @@ rem # HTTP_ATTEMPT_INTERVAL=-Dsl.httpAttemptInterval=9000
 set LOGGING=-Dsl.log.toConsole=true -Dsl.log.level=DEBUG
 set LOGBACK=-Dlogback.configurationFile=logback.xml
 
-set DEBUG=-agentlib:jdwp=transport=dt_socket,server=n,address=host.docker.internal:8000,suspend=y
+set DEBUG_AGENT=-agentlib:jdwp=transport=dt_socket,server=n,address=host.docker.internal:8000,suspend=y
 set DEBUG=-Dsl.httpDebugLog=yes
 set OTEL=-Dsl.featuresData.codeCoverageManagerVersion=v2 -Dsl.otel.enabled=true -Dsl.otel.loadEmbeddedAgent=true -Dotel.javaagent.debug=true
 set SEND_INIT_FOOTPRINTS=-Dsl.sendInitFootprints=false
