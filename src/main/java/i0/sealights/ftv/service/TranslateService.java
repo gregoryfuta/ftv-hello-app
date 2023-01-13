@@ -14,10 +14,13 @@ public class TranslateService {
     }
 
     public TranslationEntry translate(final String from) {
+        if (from == null) {
+            new TranslationEntry("from","UNKNOWN".toUpperCase());
+        }
         Optional<String> translated = source.fetchEntry(from);
 
         return translated.map(translation -> new TranslationEntry(from, translation))
-            .orElse(new TranslationEntry(from,"UNKNOWN"));
+            .orElse(new TranslationEntry(from,"UNKNOWN".toUpperCase()));
 
     }
 

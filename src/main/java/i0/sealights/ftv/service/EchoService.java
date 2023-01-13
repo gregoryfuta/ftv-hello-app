@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 public class EchoService {
 
     public Optional<String> doEcho(final String phrase) {
-        if (phrase.startsWith("*")) {
+        if (phrase != null && phrase.startsWith("*")) {
             return Optional.empty();
         }
-        return Optional.of("PONG: " + phrase);
+        return Optional.of("PONG: ".toUpperCase() + phrase);
     }
 
     public int intentionallyUnusedMethod() {

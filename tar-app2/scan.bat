@@ -1,0 +1,16 @@
+set SL_TOKEN=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL0RFVi1pbnRlZy1mdHYyLmF1dGguc2VhbGlnaHRzLmlvLyIsImp3dGlkIjoiREVWLWludGVnLWZ0djIsaS0wMmQ3YjRhNzczMDAxMDk5NixBUElHVy0yMjZjYjZlOS0xNzdmLTRmZDEtYmE1OC00ZTgyNGFiYzdkZWYsMTY3MDk2MzIyNjI5MyIsInN1YmplY3QiOiJTZWFMaWdodHNAYWdlbnQiLCJhdWRpZW5jZSI6WyJhZ2VudHMiXSwieC1zbC1yb2xlIjoiYWdlbnQiLCJ4LXNsLXNlcnZlciI6Imh0dHBzOi8vZGV2LWludGVnLWZ0djItZ3cuZGV2LnNlYWxpZ2h0cy5jby9hcGkiLCJzbF9pbXBlcl9zdWJqZWN0IjoiIiwiaWF0IjoxNjcwOTYzMjI2fQ.GhSaEzmMvXkkGfCF1wNAMVDeM5PA13CBTl3zb58c_128P6TkbjtS2BLntxNciz-3AIQdGNxphM2f75X2f7JmZ02bmNwJG4t9UgnU_dm2wqn32FgTsp6XSnVF_0Wa9Sb6ipB7XdsNcyhzE87kn14jz8vZXcPzCJAf1Tai0bFTpohy2PDeipWroXW_yhUkdPxgk3yqdiETU1zQUoXet41RpKbvBawWUV79kkRR6PqbAYwxpcXrEJbwIk-gf8jFjGnqvHB3TOIuiwtRztL8NiF4ID8Q7g86aWkVoIlNrOGr63vH9_vQ0hE9FAK5jrOvjKnVRjIFmp2wu3g038S02hKVQZcmUG0075LW6YBVpvnsDWnLtLtbH_WlheomKh6rAVcD9XnA4ksQEl9W27BiOH7QQUx6Cf7rw5C1bKP1Pb9HjAIg3FLRZLZU9-p0a-q8RVrmFUK8VRj4jTAhT5pRpXTL2KELP15t_RQGffjyxW3CsL-q5S-ZFB2Bp0hKmbbOOkcfvE3SusXzQJXG8jpj_K2wkJDE6hGRaPZcmjYfoke72dEPbG43cIFeWdxS5gJaO-oX9Q9htNnHgGX4eAOapk8r5iq7Jl-88CBwqvF59FLPCdMkDYawLfRDduFrxjonZf50XTbSVVqjgQUr5l9lppf-WBSjoBBSr_-i7-uaNrX05Fk
+
+
+set LOGGING=-Dsl.log.toConsole=true -Dsl.log.level=info
+set SL_TOKEN_FILE=token.txt
+set PACKAGES="*i0.sealights.*"
+set SL_BUILD_SESSION_ID=5db59d71-0001-4656-b50a-69a91b97f68c
+set SL_BRANCHNAME=master
+set BUILD_NAME=classic-008
+
+
+java -jar ..\sl-build-scanner.jar -config -tokenfile %SL_TOKEN_FILE% -appname build-scan-builder -buildname %BUILD_NAME% -pi %PACKAGES% -branchname %SL_BRANCHNAME% -buildsessionidfile buildSessionId.txt
+
+java %LOGGING% -jar ..\sl-build-scanner.jar -scan -tokenfile %SL_TOKEN_FILE% -buildsessionidfile buildSessionId.txt -workspacepath . -appname build-scan-builder -branch master -build %BUILD_NAME% -pi %PACKAGES% -r
+
+rem java -jar ..\sl-build-scanner.jar -buildend -ok -tokenfile %SL_TOKEN_FILE% -buildsessionidfile buildSessionId.txt

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class HelloService {
 
     public Optional<String> sayHello(final String nameToGreet) {
-        return Optional.of("Hello," + " " + nameToGreet);
+        return Optional.of("Hello, " + nameToGreet);
     }
 
     public int intentionallyUnusedHelloMethod() {
